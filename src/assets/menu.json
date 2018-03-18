@@ -1,0 +1,26 @@
+{
+  "path": "/admin",
+  "component": "./components/Index.vue",
+  "redirect": "/admin/user",
+  "children": [
+    {
+      "path": "user",
+      "component": "./components/admin/user.vue",
+      "redirect": "/admin/user/list",
+      "children": [
+        {
+          "path": "list",
+          "component": "./components/admin/user/list.vue"
+        },
+        {
+          "path": "detail",
+          "component": "./components/admin/user/detail.vue"
+        }
+      ]
+    },
+    {
+      "path": "role",
+      "component": "./components/admin/Role.vue"
+    }
+  ]
+}
